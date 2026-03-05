@@ -67,36 +67,66 @@ color:#e7f0ff;
 
 /* SEARCH BAR */
 
-.search-box{
-display:flex;
-background:white;
-border-radius:10px;
-overflow:hidden;
-border:4px solid #febb02;
-box-shadow:0 6px 25px rgba(0,0,0,0.2);
+/* UPDATED SEARCH BAR STYLES */
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    border: 4px solid #ffb700; /* Booking.com yellow */
+    padding: 0;
+    align-items: center;
+    max-width: 1100px;
 }
 
-.search-box input{
-padding:18px;
-border:none;
-border-right:1px solid #eee;
-font-size:15px;
-width:200px;
-outline:none;
+.search-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 12px 15px;
+    border-right: 4px solid #ffb700;
+    background: white;
 }
 
-.search-box button{
-background:#0071c2;
-color:white;
-border:none;
-padding:18px 35px;
-font-size:16px;
-cursor:pointer;
-font-weight:600;
+.search-item:last-of-type {
+    flex: 1.5; /* Gives more room to the occupancy text */
 }
 
-.search-box button:hover{
-background:#005999;
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.search-box input {
+    border: none !important;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    color: #1a1a1a;
+}
+
+.search-btn {
+    background: #0071c2;
+    color: white;
+    border: none;
+    padding: 0 32px;
+    height: 52px; /* Matches the input height */
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0 4px 4px 0;
+    margin: -1px; /* Overlaps slight gap */
+}
+
+.add-flights {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.add-flights input {
+    margin-right: 8px;
 }
 
 /* SECTION TITLE */
@@ -250,24 +280,41 @@ font-size:14px;
 
 <!-- HERO -->
 
+<!-- HERO -->
 <div class="hero">
+    <div class="hero-container">
+        <h1>Find your next stay</h1>
+        <p>Search low prices on hotels, homes and much more...</p>
 
-<div class="hero-container">
+        <div class="search-box">
+            <!-- Destination -->
+            <div class="search-item">
+                <span class="icon">🛏️</span>
+                <input type="text" placeholder="Where are you going?">
+            </div>
+            
+            <!-- Dates -->
+            <div class="search-item">
+                <span class="icon">📅</span>
+                <input type="text" placeholder="Check-in date — Check-out date" onfocus="(this.type='date')">
+            </div>
+            
+            <!-- Occupancy -->
+            <div class="search-item">
+                <span class="icon">👤</span>
+                <input type="text" placeholder="2 adults · 0 children · 1 room">
+            </div>
 
-<h1>Find your next stay</h1>
-<p>Search low prices on hotels, homes and much more...</p>
-
-<div class="search-box">
-<input placeholder="Where are you going?">
-<input type="date">
-<input type="date">
-<input placeholder="2 adults · 0 children · 1 room">
-<button>Search</button>
+            <button class="search-btn">Search</button>
+        </div>
+        
+        <div class="add-flights">
+            <input type="checkbox" id="flights">
+            <label for="flights">Add flights</label>
+        </div>
+    </div>
 </div>
 
-</div>
-
-</div>
 
 <!-- POPULAR HOTELS -->
 
