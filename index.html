@@ -39,7 +39,7 @@ color:#444;
 font-size:14px;
 }
 
-/* HERO (BOOKING STYLE) */
+/* HERO */
 
 .hero{
 background:#003580;
@@ -67,482 +67,66 @@ color:#e7f0ff;
 
 /* SEARCH BAR */
 
-/* UPDATED SEARCH BAR STYLES */
 .search-box {
-    display: flex;
-    background: white;
-    border-radius: 8px;
-    border: 4px solid #ffb700; /* Booking.com yellow */
-    padding: 0;
-    align-items: center;
-    max-width: 1100px;
+display:flex;
+background:white;
+border-radius:8px;
+border:4px solid #ffb700;
+align-items:center;
+max-width:1100px;
 }
 
 .search-item {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    padding: 12px 15px;
-    border-right: 4px solid #ffb700;
-    background: white;
+display:flex;
+align-items:center;
+flex:1;
+padding:12px 15px;
+border-right:4px solid #ffb700;
+background:white;
 }
 
 .search-item:last-of-type {
-    flex: 1.5; /* Gives more room to the occupancy text */
+flex:1.5;
 }
 
 .icon {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #555;
+font-size:20px;
+margin-right:10px;
+color:#555;
 }
 
 .search-box input {
-    border: none !important;
-    font-size: 14px;
-    width: 100%;
-    outline: none;
-    color: #1a1a1a;
-}
-
-.search-btn {
-    background: #0071c2;
-    color: white;
-    border: none;
-    padding: 0 32px;
-    height: 52px; /* Matches the input height */
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 0 4px 4px 0;
-    margin: -1px; /* Overlaps slight gap */
-}
-
-.add-flights {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.add-flights input {
-    margin-right: 8px;
-}
-
-/* SECTION TITLE */
-
-.section{
-max-width:1200px;
-margin:60px auto;
-padding:0 20px;
-}
-
-.section h2{
-margin-bottom:25px;
-}
-
-/* HOTEL GRID */
-
-.hotel-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-/* HOTEL CARD */
-
-.hotel-card{
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.07);
-transition:0.3s;
-cursor:pointer;
-}
-
-.hotel-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.hotel-img{
-height:170px;
-background-size:cover;
-background-position:center;
-}
-
-.hotel-info{
-padding:15px;
-}
-
-.hotel-info h3{
-margin:0;
-font-size:17px;
-}
-
-.location{
-font-size:13px;
-color:#777;
-margin:4px 0;
-}
-
-.rating{
-color:#ff9800;
+border:none;
 font-size:14px;
-}
-
-.price{
-margin-top:8px;
-font-weight:bold;
-color:#0071c2;
-}
-
-/* LUXE SECTION */
-
-.luxe-section{
-background:#fffdf3;
-border-radius:16px;
-padding:35px;
-display:flex;
-gap:25px;
-align-items:center;
-margin-top:60px;
-border:1px solid #f2e9d2;
-}
-
-.luxe-intro{
-width:240px;
-}
-
-.luxe-intro span{
-font-size:12px;
-letter-spacing:1px;
-}
-
-.luxe-intro h1{
-color:#d4af37;
-margin:5px 0;
-}
-
-.luxe-grid{
-display:flex;
-gap:20px;
-flex:1;
-}
-
-.luxe-card{
-flex:1;
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.luxe-img{
-height:140px;
-background-size:cover;
-background-position:center;
-}
-
-.luxe-info{
-padding:12px;
-font-size:13px;
-}
-
-/* FOOTER */
-
-.footer{
-margin-top:80px;
-background:#1f2937;
-color:white;
-padding:30px;
-text-align:center;
-font-size:14px;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<div class="navbar">
-<div class="logo">Agentforce Travel</div>
-
-<div class="nav-links">
-<a href="#">Hotels</a>
-<a href="#">Flights</a>
-<a href="#">Packages</a>
-<a href="#">Support</a>
-</div>
-</div>
-
-<!-- HERO -->
-
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-container">
-        <h1>Find your next stay</h1>
-        <p>Search low prices on hotels, homes and much more...</p>
-
-        <div class="search-box">
-            <!-- Destination -->
-            <div class="search-item">
-                <span class="icon">🛏️</span>
-                <input type="text" placeholder="Where are you going?">
-            </div>
-            
-            <!-- Dates -->
-            <div class="search-item">
-                <span class="icon">📅</span>
-                <input type="text" placeholder="Check-in date — Check-out date" onfocus="(this.type='date')">
-            </div>
-            
-            <!-- Occupancy -->
-            <div class="search-item">
-                <span class="icon">👤</span>
-                <input type="text" placeholder="2 adults · 0 children · 1 room">
-            </div>
-
-            <button class="search-btn">Search</button>
-        </div>
-        
-        <div class="add-flights">
-            <input type="checkbox" id="flights">
-            <label for="flights">Add flights</label>
-        </div>
-    </div>
-</div>
-
-
-<!-- POPULAR HOTELS -->
-
-<div class="section">
-
-<h2>Popular Hotels</h2>
-
-<div class="hotel-grid">
-
-<div class="hotel-card">
-<div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945')"></div>
-<div class="hotel-info">
-<h3>Grand Palace Hotel</h3>
-<div class="location">Dubai Marina</div>
-<div class="rating">⭐ 4.7</div>
-<div class="price">₹12,500 / night</div>
-</div>
-</div>
-
-<div class="hotel-card">
-<div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa')"></div>
-<div class="hotel-info">
-<h3>Ocean View Resort</h3>
-<div class="location">Maldives</div>
-<div class="rating">⭐ 4.8</div>
-<div class="price">₹25,000 / night</div>
-</div>
-</div>
-
-<div class="hotel-card">
-<div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b')"></div>
-<div class="hotel-info">
-<h3>Royal Taj Palace</h3>
-<div class="location">Jaipur</div>
-<div class="rating">⭐ 4.6</div>
-<div class="price">₹9,200 / night</div>
-</div>
-</div>
-
-<div class="hotel-card">
-<div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4')"></div>
-<div class="hotel-info">
-<h3>Skyline Suites</h3>
-<div class="location">Singapore</div>
-<div class="rating">⭐ 4.5</div>
-<div class="price">₹14,300 / night</div>
-</div>
-</div>
-
-</div>
-
-<!-- LUXE -->
-
-<div class="luxe-section">
-
-<div class="luxe-intro">
-<span>INTRODUCING</span>
-<h1>MMT Luxe Selections</h1>
-</div>
-
-<div class="luxe-grid">
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7')"></div>
-<div class="luxe-info">
-<b>Luxe Properties in India</b>
-<p>Top luxury hotels & curated experiences</p>
-</div>
-</div>
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85')"></div>
-<div class="luxe-info">
-<b>Luxe Villas</b>
-<p>Premium private villas & luxury stays</p>
-</div>
-</div>
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21')"></div>
-<div class="luxe-info">
-<b>Luxe International</b>
-<p>Dubai, Maldives, Thailand & more</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Agentforce Travel
-</div>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Agentforce Travel</title>
-
-<style>
-
-body{
-font-family: "Segoe UI", Roboto, Arial;
-margin:0;
-background:#f5f7fb;
+width:100%;
+outline:none;
 color:#1a1a1a;
 }
 
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 60px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-color:#0071c2;
-}
-
-.nav-links a{
-margin-left:25px;
-text-decoration:none;
-color:#444;
-font-size:14px;
-}
-
-/* HERO (BOOKING STYLE) */
-
-.hero{
-background:#003580;
-padding:80px 0 110px 0;
-display:flex;
-justify-content:center;
-}
-
-.hero-container{
-width:1100px;
-max-width:90%;
-color:white;
-}
-
-.hero-container h1{
-font-size:48px;
-margin-bottom:8px;
-}
-
-.hero-container p{
-font-size:20px;
-margin-bottom:30px;
-color:#e7f0ff;
-}
-
-/* SEARCH BAR */
-
-/* UPDATED SEARCH BAR STYLES */
-.search-box {
-    display: flex;
-    background: white;
-    border-radius: 8px;
-    border: 4px solid #ffb700; /* Booking.com yellow */
-    padding: 0;
-    align-items: center;
-    max-width: 1100px;
-}
-
-.search-item {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    padding: 12px 15px;
-    border-right: 4px solid #ffb700;
-    background: white;
-}
-
-.search-item:last-of-type {
-    flex: 1.5; /* Gives more room to the occupancy text */
-}
-
-.icon {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #555;
-}
-
-.search-box input {
-    border: none !important;
-    font-size: 14px;
-    width: 100%;
-    outline: none;
-    color: #1a1a1a;
-}
-
 .search-btn {
-    background: #0071c2;
-    color: white;
-    border: none;
-    padding: 0 32px;
-    height: 52px; /* Matches the input height */
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 0 4px 4px 0;
-    margin: -1px; /* Overlaps slight gap */
+background:#0071c2;
+color:white;
+border:none;
+padding:0 32px;
+height:52px;
+font-size:18px;
+cursor:pointer;
+font-weight:500;
+border-radius:0 4px 4px 0;
 }
 
 .add-flights {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
+margin-top:15px;
+display:flex;
+align-items:center;
+font-size:14px;
 }
 
 .add-flights input {
-    margin-right: 8px;
+margin-right:8px;
 }
 
-/* SECTION TITLE */
+/* SECTION */
 
 .section{
 max-width:1200px;
@@ -693,41 +277,40 @@ font-size:14px;
 
 <!-- HERO -->
 
-<!-- HERO -->
 <div class="hero">
-    <div class="hero-container">
-        <h1>Find your next stay</h1>
-        <p>Search low prices on hotels, homes and much more...</p>
+<div class="hero-container">
 
-        <div class="search-box">
-            <!-- Destination -->
-            <div class="search-item">
-                <span class="icon">🛏️</span>
-                <input type="text" placeholder="Where are you going?">
-            </div>
-            
-            <!-- Dates -->
-            <div class="search-item">
-                <span class="icon">📅</span>
-                <input type="text" placeholder="Check-in date — Check-out date" onfocus="(this.type='date')">
-            </div>
-            
-            <!-- Occupancy -->
-            <div class="search-item">
-                <span class="icon">👤</span>
-                <input type="text" placeholder="2 adults · 0 children · 1 room">
-            </div>
+<h1>Find your next stay</h1>
+<p>Search low prices on hotels, homes and much more...</p>
 
-            <button class="search-btn">Search</button>
-        </div>
-        
-        <div class="add-flights">
-            <input type="checkbox" id="flights">
-            <label for="flights">Add flights</label>
-        </div>
-    </div>
+<div class="search-box">
+
+<div class="search-item">
+<span class="icon">🛏️</span>
+<input type="text" placeholder="Where are you going?">
 </div>
 
+<div class="search-item">
+<span class="icon">📅</span>
+<input type="date">
+</div>
+
+<div class="search-item">
+<span class="icon">👤</span>
+<input type="text" placeholder="2 adults · 0 children · 1 room">
+</div>
+
+<button class="search-btn">Search</button>
+
+</div>
+
+<div class="add-flights">
+<input type="checkbox" id="flights">
+<label for="flights">Add flights</label>
+</div>
+
+</div>
+</div>
 
 <!-- POPULAR HOTELS -->
 
@@ -778,76 +361,38 @@ font-size:14px;
 </div>
 
 </div>
-
-<!-- LUXE -->
-
-<div class="luxe-section">
-
-<div class="luxe-intro">
-<span>INTRODUCING</span>
-<h1>MMT Luxe Selections</h1>
 </div>
 
-<div class="luxe-grid">
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7')"></div>
-<div class="luxe-info">
-<b>Luxe Properties in India</b>
-<p>Top luxury hotels & curated experiences</p>
-</div>
-</div>
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85')"></div>
-<div class="luxe-info">
-<b>Luxe Villas</b>
-<p>Premium private villas & luxury stays</p>
-</div>
-</div>
-
-<div class="luxe-card">
-<div class="luxe-img" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21')"></div>
-<div class="luxe-info">
-<b>Luxe International</b>
-<p>Dubai, Maldives, Thailand & more</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
+<!-- FOOTER -->
 
 <div class="footer">
 © 2026 Agentforce Travel
 </div>
 
-<script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US'; 
-                embeddedservice_bootstrap.init(
-                    '00Dfj00000FtjVJ',
-                    'GitHub_Agent_Channel',
-                    'https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282',
-                    {
-                        scrt2URL: 'https://orgfarm-3b9170c872-dev-ed.develop.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
-    <script type='text/javascript' src='https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<!-- SALESFORCE AGENTFORCE CHAT -->
 
+<script type='text/javascript'>
+function initEmbeddedMessaging() {
+try {
+embeddedservice_bootstrap.settings.language = 'en_US';
+embeddedservice_bootstrap.init(
+'00Dfj00000FtjVJ',
+'GitHub_Agent_Channel',
+'https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282',
+{
+scrt2URL: 'https://orgfarm-3b9170c872-dev-ed.develop.my.salesforce-scrt.com'
+}
+);
+} catch (err) {
+console.error('Error loading Embedded Messaging: ', err);
+}
+};
+</script>
+
+<script type='text/javascript'
+src='https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282/assets/js/bootstrap.min.js'
+onload='initEmbeddedMessaging()'>
+</script>
 
 </body>
 </html>
-
-
-
-
-
