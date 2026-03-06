@@ -341,27 +341,25 @@ border:1px solid #eee;
 <!-- SALESFORCE AGENTFORCE CHAT -->
 
 <script type='text/javascript'>
-function initEmbeddedMessaging() {
-try {
-embeddedservice_bootstrap.settings.language = 'en_US';
-embeddedservice_bootstrap.init(
-'00Dfj00000FtjVJ',
-'GitHub_Agent_Channel',
-'https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282',
-{
-scrt2URL: 'https://orgfarm-3b9170c872-dev-ed.develop.my.salesforce-scrt.com'
-}
-);
-} catch (err) {
-console.error('Error loading Embedded Messaging: ', err);
-}
-};
-</script>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-<script type='text/javascript'
-src='https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282/assets/js/bootstrap.min.js'
-onload='initEmbeddedMessaging()'>
+			embeddedservice_bootstrap.init(
+				'00Dfj00000FtjVJ',
+				'GitHub_Agent_Channel',
+				'https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282',
+				{
+					scrt2URL: 'https://orgfarm-3b9170c872-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
+<script type='text/javascript' src='https://orgfarm-3b9170c872-dev-ed.develop.my.site.com/ESWGitHubAgentChannel1772695907282/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 </body>
 </html>
